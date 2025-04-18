@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from controllers import produto_controller, cliente_controller
+from controller import produto_controller, cliente_controller
 from db import db
 from model import Usuario, Produto
 

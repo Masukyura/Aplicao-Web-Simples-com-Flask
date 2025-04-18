@@ -1,6 +1,6 @@
 from flask import Flask
 from db import db
-from model import Usuario, Produto
+from app.model import Usuario, Produto
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///dados.db'
