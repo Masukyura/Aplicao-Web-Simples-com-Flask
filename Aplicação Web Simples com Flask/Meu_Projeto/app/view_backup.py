@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from controller import produto_controller, cliente_controller
+from controller import controller
 from db import db
 from model import Usuario, Produto
 
@@ -13,12 +13,12 @@ def index():
 # Lista de produtos
 @app.route("/produtos")
 def listar_produtos():
-    return produto_controller.listar_produtos()
+    return controller.listar_produtos()
 
 # Lista de clientes
 @app.route("/clientes")
 def listar_clientes():
-    return cliente_controller.listar_clientes()
+    return controller.listar_clientes()
 
 @app.route("/cadastrar-cliente", methods=["GET", "POST"])
 def cadastrar_cliente():

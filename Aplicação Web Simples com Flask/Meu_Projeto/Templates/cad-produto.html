@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo produto</title> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_cadastro.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo1.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul class="flash-messages">
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+    <main id="form_container">
+        <div id="form_header">
+             <h1 id="form_title">Cadastro de produto</h1>
+         </div>
+
+    <form action="{{ url_for('controller.cad_produto') }}" method="POST" id="form">
+        <div id="input_container">
+            <div class="input-box">
+                <label for="nome" class="form-label">Nome do Produto</label>
+                <div class="input-field">
+                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome do Produto" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label for="preco" class="form-label">Preço</label>
+                <div class="input-field">
+                    <input type="text" name="preco" id="preco" class="form-control" placeholder="Preço" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label for="estoque" class="form-label">Estoque</label>
+                <div class="input-field">
+                    <input type="text" name="estoque" id="estoque" class="form-control" placeholder="Estoque" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label for="quantidade" class="form-label">Quantidade</label>
+                <div class="input-field">
+                    <input type="text" name="quantidade" id="quantidade" class="form-control" placeholder="Quantidade" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label for="marca" class="form-label">Marca</label>
+                <div class="input-field">
+                    <input type="text" name="marca" id="marca" class="form-control" placeholder="Marca" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label for="categoria" class="form-label">Categoria</label>
+                <div class="input-field">
+                    <input type="text" name="categoria" id="categoria" class="form-control" placeholder="Categoria" required>
+                </div>
+            </div>
+
+            <input type="submit" value="Confirmar">
+        </div>   
+    </form>
+</main> <br>
+
+<nav class="menu">
+    <a href="{{ url_for('controller.index') }}" class="botao">Voltar ao início</a>
+</nav>
+</body>
+</html>

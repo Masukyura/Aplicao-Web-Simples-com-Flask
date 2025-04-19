@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial</title> 
-    <link rel="stylesheet" href="Static/css/style-index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-index.css') }}">
     <link rel="shortcut icon" href="img/logo1.ico" type="image/x-icon">
 </head>
 
@@ -14,14 +14,14 @@
             <h2>Bem-vindo a ShoPI!</h2>
             <hr>
             <nav class="menu">
-                <a href="cad-produto.html" class="botao">Cadastrar produto</a>
-                <a href="cad-cliente.html" class="botao">Cadastrar Cliente</a>
+                <a href="{{ url_for('controller.cad_produto') }}" class="botao">Cadastrar produto</a>
+                <a href="{{ url_for('controller.cad_cliente') }}" class="botao">Cadastrar Cliente</a>
             </nav> 
 
             <h3>Já cadastrados:</h3>
             <nav class="menu">
-                <a href="produtos.html" class="botao">Produtos</a>
-                <a href="clientes.html" class="botao">Clientes</a>
+                <a href="{{ url_for('controller.produtos') }}" class="botao">Produtos</a>
+                <a href="{{ url_for('controller.clientes') }}" class="botao">Clientes</a>
             </nav>   
         </header>
     </div>
