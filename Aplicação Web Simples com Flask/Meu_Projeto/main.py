@@ -1,7 +1,7 @@
 from flask import Flask
 from db import db
 from app.model import Usuario, Produto
-from app.controller import controller
+from app.view import view
 from datetime import datetime
 
 
@@ -17,7 +17,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False  # <- sempre bom adicionar 
 app.secret_key = 'sua_chave_secreta'
 
 db.init_app(app)
-app.register_blueprint(controller)
+app.register_blueprint(view)
 
 if __name__ == "__main__":
     with app.app_context():

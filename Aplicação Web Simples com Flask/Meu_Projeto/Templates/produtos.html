@@ -34,7 +34,7 @@
                 <td>{{ produto.categoria}}</td>
           <td> 
             <a href="/edit-produto/{{ produto.id }}" class="botao_editar">Editar</a>
-            <form action="{{ url_for('controller.delete_produto', id=produto.id) }}" method="POST" style="display:inline;">
+            <form action="{{ url_for('view.delete_produto', id=produto.id) }}" method="POST" style="display:inline;">
               <button type="submit" class="botao_excluir" onclick="return confirm('Deseja realmente excluir este produto?')">Excluir</button>
           </form>
           
@@ -44,8 +44,8 @@
       </table>
 
       <nav class="menu">
-        <a href="{{ url_for('controller.index') }}" class="botao">Voltar ao início</a>
-        <a href="{{ url_for('controller.cad_produto') }}" class="botao">Voltar ao cadastro de produtos</a>
+        <a href="{{ url_for('view.index') }}" class="botao">Voltar ao início</a>
+        <a href="{{ url_for('view.cad_produto') }}" class="botao">Cadastro de produto</a>
     </nav>
     </div>
   </body>
