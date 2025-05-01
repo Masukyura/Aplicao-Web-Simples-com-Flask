@@ -33,10 +33,8 @@ Frontend: HTML5, CSS3
 
 # Passos para Execução
 
-Pré-requisitos
-Python 3.7 ou superior instalado
-
-Pip (gerenciador de pacotes do Python)
+Pré-requisitos:
+Python 3.7 ou superior instalado, Pip (gerenciador de pacotes do Python)
 
 Clone o repositório (se aplicável) ou copie os arquivos do projeto para uma pasta local
 
