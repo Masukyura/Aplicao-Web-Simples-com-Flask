@@ -4,18 +4,25 @@ Protótipo Funcional de uma Aplicação Web Simples com Flask
 O ShoPI é um sistema de gerenciamento para pequenos comércios, desenvolvido em Flask (Python), que permite o cadastro e gerenciamento de clientes e produtos. O sistema oferece uma interface web intuitiva para realizar operações CRUD (Create, Read, Update, Delete) sobre esses dados.
 
 # Funcionalidades Implementadas
-Módulo de Clientes
-Cadastro de clientes: Inclusão de novos clientes com nome, e-mail, data de nascimento, cidade e telefone
 
-Listagem de clientes: Visualização de todos os clientes cadastrados em formato de tabela
+### 👥 Módulo de Clientes
+- **Cadastro Completo**:
+  - Nome completo (apenas letras e espaços)
+  - E-mail válido (com validação de formato)
+  - Data de nascimento
+  - Cidade (apenas letras e espaços)
+  - Telefone
+- **Listagem Organizada de clientes**:
+  - Tabela responsiva com todos os campos
+  - Ordenação por ID
+- **Edição Segura**:
+  - Mesmas validações do cadastro
+  - Persistência imediata no banco
+- **Exclusão com Confirmação**:
+  - Modal de confirmação
+  - Feedback visual
 
-Edição de clientes: Atualização dos dados dos clientes existentes
-
-Exclusão de clientes: Remoção de clientes do sistema
-
-Validação de dados: Verificação dos campos antes do cadastro/atualização
-
-# Módulo de Produtos
+# 📦 Módulo de Produtos
 Cadastro de produtos: Inclusão de novos produtos com nome, preço, estoque, quantidade, marca e categoria
 
 Listagem de produtos: Visualização de todos os produtos cadastrados em formato de tabela
@@ -55,6 +62,9 @@ source venv/bin/activate
 # Instale as dependências:
 
 pip install flask flask-sqlalchemy
+
+# No terminal Python após executar flask shell
+db.create_all()
 
 # Execute a aplicação:
 
