@@ -14,14 +14,14 @@
             <h2>Bem-vindo a ShoPI!</h2>
             <hr>
             <nav class="menu">
-                <a href="{{ url_for('controller.cad_produto') }}" class="botao">Cadastrar produto</a>
-                <a href="{{ url_for('controller.cad_cliente') }}" class="botao">Cadastrar Cliente</a>
+                <a href="{{ url_for('view.cad_produto') }}" class="botao">Cadastrar produto</a>
+                <a href="{{ url_for('view.cad_cliente') }}" class="botao">Cadastrar Cliente</a>
             </nav> 
 
             <h3>Já cadastrados:</h3>
             <nav class="menu">
-                <a href="{{ url_for('controller.produtos') }}" class="botao">Produtos</a>
-                <a href="{{ url_for('controller.clientes') }}" class="botao">Clientes</a>
+                <a href="{{ url_for('view.produtos') }}" class="botao">Produtos</a>
+                <a href="{{ url_for('view.listar_clientes') }}" class="botao">Clientes</a>
             </nav>   
         </header>
     </div>

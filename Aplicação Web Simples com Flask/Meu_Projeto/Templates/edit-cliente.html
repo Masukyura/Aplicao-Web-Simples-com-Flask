@@ -25,7 +25,7 @@
             <h1 id="form_title">Editar Cliente</h1>
         </div>
     
-        <form action="{{ url_for('controller.edit_cliente', id=cliente.id) }}" method="POST" id="form">
+        <form action="{{ url_for('view.edit_cliente', id=cliente.id) }}" method="POST" id="form">
             <div id="input_container">
                 <div class="input-box">
                     <label for="nome" class="form-label">Nome Completo</label>
@@ -68,7 +68,7 @@
     </main> <br>
 
     <nav class="menu">
-        <a href="{{ url_for('controller.index') }}" class="botao">Voltar ao início</a>
+        <a href="{{ url_for('view.index') }}" class="botao">Voltar ao início</a>
     </nav>
 </body>
 </html>

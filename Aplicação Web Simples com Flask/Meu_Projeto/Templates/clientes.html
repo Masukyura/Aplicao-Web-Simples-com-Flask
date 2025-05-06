@@ -32,7 +32,7 @@
                 <td>{{ cliente.telefone }}</td>
              <td>
                 <a href="/edit-cliente/{{ cliente.id }}" class="botao_editar">Editar</a>
-                <form action="{{ url_for('controller.delete_cliente', id=cliente.id) }}" method="POST" style="display:inline;">
+                <form action="{{ url_for('view.delete_cliente', id=cliente.id) }}" method="POST" style="display:inline;">
                     <button type="submit" class="botao_excluir" onclick="return confirm('Deseja realmente excluir este cliente?')">Excluir</button>
                 </form>
                 
@@ -41,8 +41,8 @@
             {% endfor %}
         </table>
         <nav class="menu">
-            <a href="{{ url_for('controller.index') }}" class="botao">Voltar ao início</a>
-            <a href="{{ url_for('controller.cad_cliente') }}" class="botao">Voltar ao cadastro de clientes</a>
+            <a href="{{ url_for('view.index') }}" class="botao">Voltar ao início</a>
+            <a href="{{ url_for('view.cad_cliente') }}" class="botao">Cadastro de cliente</a>
         </nav>
     </div>
 </body>
